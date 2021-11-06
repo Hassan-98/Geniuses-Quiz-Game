@@ -1,0 +1,1042 @@
+// Main Styles :  Navbar | Header | Footer | Fonts
+
+$w: 100%;
+
+@include addFont(normalFont, "normal.ttf");
+@include addFont(logoFont, "logo.otf");
+
+*{
+    font-family: normalFont;
+    direction: rtl;
+}
+
+body{
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/white-waves.png");
+}
+
+header{
+    background: #F9FAFD;
+    box-shadow: 0 -5px 10px rgba(#000, 0.1);
+    img{
+        display: none;
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        padding: 10px;
+        @include xs{
+            display: block;
+        }
+    }
+    h2{
+        font-family: logoFont;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        @include xs{
+            display: none;
+        }
+    }
+}
+
+nav{
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(#000, 0.1);
+    margin-bottom: 10px;
+    ul{
+        list-style: none;
+        text-align: center;
+        li{
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 30px;
+            border-bottom: 2px solid #fff;
+            width: $w / 3;
+            &:hover{
+                border-bottom: 2px solid #000;
+            }
+            &.active{
+                border-bottom: 2px solid #000;
+            }
+            img{
+                width: 40px;
+                height: 40px;
+                @include xs {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.auth{
+    display: none;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+
+    img{
+        width: 75px;
+        height: 75px;
+    }
+    
+    .loginDiv, .signupDiv{
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(#000, 0.15);
+        padding: 20px;
+        margin: 60px 10px 0;
+        width: 35%;
+        display: inline-block;
+        border-radius: 5px;
+        &:hover{
+            background: rgb(245, 245, 245);
+        }
+        @include sm {
+            width: 45%;
+        }
+        @include xs {
+            width: 100%;
+            margin: 20px 0 0;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+            @include xs {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    .loginGoogle{
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(#000, 0.15);
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        width: calc(70% + 20px);
+        display: inline-block;
+        @include sm {
+            width: calc(90% + 20px);
+        }
+        @include xs {
+            width: 100%;
+        }
+        &:hover{
+            background: rgb(245, 245, 245);
+        }
+        img{
+            width: 70px;
+            height: 70px;
+            @include xs {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+.main-face{
+    display: none;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 15px;
+    text-align: center;    
+    margin-bottom: 10px;
+
+    img{
+        width: 80px;
+        height: 80px;
+        &.authPic{
+            padding: 3px;
+            box-shadow: 0 0 5px rgba(#000, 0.3);
+            border-radius: 50%;
+        }
+    }
+    
+    .challengeDiv, .challengeFriendDiv{
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(#000, 0.15);
+        padding: 20px;
+        margin: 60px 10px 0;
+        width: 35%;
+        display: inline-block;
+        border-radius: 5px;
+        &:hover{
+            background: rgb(245, 245, 245);
+        }
+        @include sm {
+            width: 45%;
+        }
+        @include xs {
+            width: 100%;
+            margin: 20px 0 0;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+            @include xs {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    .friendListDiv{
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(#000, 0.15);
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        width: calc(70% + 20px);
+        display: inline-block;
+        @include sm {
+            width: calc(90% + 20px);
+        }
+        @include xs {
+            width: 100%;
+        }
+        &:hover{
+            background: rgb(245, 245, 245);
+        }
+        img{
+            width: 70px;
+            height: 70px;
+            @include xs {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    .match{
+        display: none;
+    }
+    .game-face{
+        overflow: hidden;
+        display: none;
+        padding: 150px 0;
+        .playerOne, .playerTwo{
+            display: inline-block;
+            width: 40%;
+            img{
+                width: 150px;
+                height: 150px;
+                box-shadow: 0 0 10px rgba(#000, 0.15);
+                padding: 3px;
+                border-radius: 50%;
+                @include xs {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+        .playerOne{
+            transform: translateY(-400px);
+        }
+        .playerTwo{
+            transform: translateY(400px);
+        }
+        .vs{
+            display: inline-block;      
+            position: relative;
+            top: -65px;
+            @include xs {
+                top: -45px;
+            }
+            img{
+                width: 60px;
+                height: 60px;
+                @include xs {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    .game{
+        display: none;
+        padding: 40px 0;
+        .player-one-score, .player-two-score{
+            padding: 10px;
+            width: 48%;
+            display: inline-block;
+            margin: 10px auto 30px;
+            font-size: 23px;
+            border: 2px solid #28B446;
+            box-shadow: 0 0 10px rgba(#000, 0.15);
+            border-radius: 0;
+            @include xs {
+                font-size: 16px;
+            }
+        }
+        .player-one-score{
+            border-color: #5928B4;
+            box-shadow: 0 0 10px rgba(#5928B4, 0.5);
+            color: #5928B4;
+        }
+        .player-two-score{
+            border-color: #B42828;
+            box-shadow: 0 0 10px rgba(#B42828, 0.5);
+            color: #B42828;
+        }
+        .timer{
+            padding: 7px;
+            width: 30%;
+            display: inline-block;
+            margin: 10px auto 20px;
+            font-size: 25px;
+            border: 2px solid #28B446;
+            box-shadow: 0 0 10px rgba(#000, 0.15);
+            border-radius: 5px;
+        }
+        .questionNumber{
+            padding: 7px;
+            width: 20%;
+            display: inline-block;
+            margin: 10px auto 20px;
+            font-size: 25px;
+            border: 2px solid #28B446;
+            box-shadow: 0 0 10px rgba(#000, 0.15);
+            border-radius: 5px;
+        }
+        .question{
+            padding: 18px 10px;
+            margin: 20px 10px;
+            font-size: 25px;
+            border-bottom: 2px solid #28B446;
+            box-shadow: 0 0 10px rgba(#000, 0.15);
+            border-radius: 10px;
+            background: rgb(233, 232, 232);
+            @include xs {
+                font-size: 15px;
+            }
+        }
+        .options{
+            span{
+                cursor: pointer;
+                padding: 8px;
+                margin: 10px;
+                width: calc(50% - 20px);
+                border-right: 2px solid #28B446;
+                border-left: 2px solid #28B446;
+                box-shadow: 0 0 10px rgba(#000, 0.15);
+                border-radius: 10px;
+                background: rgb(233, 232, 232);
+            }
+        }
+    }
+    .game-end{
+        display: none;
+        padding: 60px 0;
+        .winner, .loser, .equal, .winner-ultimate{
+            display: none;
+            text-align: center;
+            img{
+                width: 120px;
+                height: 120px;
+                @include xs {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .img{
+                display: inline-block;
+                margin: 25px;
+                position: relative;
+                top: -75px;
+                @include xs {
+                    margin: 5px;
+                    top: -45px;
+                }
+            }
+            .p1result, .p2result{
+                box-shadow: 0 0 10px rgba(#000, 0.15);
+                border: 2px solid #28B446;
+                padding: 15px 30px;
+                display: inline-block;
+                border-radius: 10px;
+                color: #FFF;
+                background: #28B446;
+                margin: 25px;
+                @include xs {
+                    padding: 10px;
+                    margin: 5px;
+                }
+                img{
+                    border-radius: 50%;
+                    padding: 3px;
+                    background: #ccc;
+                    box-shadow: 0 2px 10px rgba(#000, 0.3);
+                }
+                h3{
+                    margin: 5px 0 0;
+                    @include xs {
+                        font-size: 16px;
+                    }
+                }
+                i{
+                    font-size: 20px;
+                    margin-top: 5px;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    padding: 8px 5px 5px 7px;
+                    border-radius: 50%;
+                    color: #aaa;
+                    background: #fff;
+                    border: 1.5px solid #fff;
+                    box-shadow: 0 0 10px rgba(#000, 0.15);
+                    &:hover{
+                        box-shadow: 0 5px 10px rgba(#000, 0.3);
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+            .p2result{
+                border: 2px solid #B42828;
+                background: #B42828;
+            }
+        }
+        .new-game{
+            border-radius: 5px;
+            margin: 25px 0;
+            background: #28B446;
+            border: 2px solid #28B446;
+            padding: 10px 50px;
+            &:hover{
+                transform: none;
+                background: #fff;
+                color: #28B446;
+            }
+        }
+    }
+}
+
+.friend-list{
+    display: none;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
+    & > img{
+        width: 150px;
+        height: 150px;
+        margin: 15px 15px 5px;
+        @include xs {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    .backToHome{
+        border-radius: 10px;
+        background: #fff;
+        border: 2px solid #767676;
+        padding: 10px 40px;
+        color: #767676;
+        box-shadow: 0 0 8px rgba(#767676, 0.2);
+    }
+    .addNewFriend{
+        border-radius: 10px;
+        background: #fff;
+        border: 2px solid #3739b9;
+        padding: 10px 40px;
+        color: #3739b9;
+        box-shadow: 0 0 8px rgba(#3739b9, 0.2);
+    }
+    .noFriends{
+        display: none;
+        padding: 40px 0;
+        background: rgb(236, 235, 235);
+        box-shadow: 0 0 10px rgba(#000, 0.1);
+        border-radius: 10px;
+        img{
+            width: 140px;
+            height: 140px;
+        }
+    }
+    .friends{
+        padding: 20px 0;
+        table{
+            width: 100%;
+            img{
+                &.pimg{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    box-shadow: 0 0 8px rgba(#000, 0.2);
+                    border: 2px solid #ccc;
+                    @include xs {
+                        display: none;
+                    }
+                }
+            }
+            tr{
+                td, th{
+                    padding: 10px 5px;
+                    text-align: center;
+                    font-size: 20px;
+                    border: 0.5px solid #00000014;
+                    box-shadow: 0 2px 2px rgba(#000, 0.1);
+                    img{
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        &:hover{
+                            transform: scale(0.95);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.settings-section{
+    display: none;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
+    & > img{
+        width: 150px;
+        height: 150px;
+        margin: 15px 15px 5px;
+        @include xs {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    div{
+        padding: 18px 10px;
+        margin: 20px 10px;
+        box-shadow: 0 0 10px rgba(#000, 0.15);
+        border-radius: 10px;
+        background: rgb(233, 232, 232);
+        @include xs {
+            font-size: 15px;
+        }
+    }
+    .logout, .change-data{
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.rankings-section{
+    display: none;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
+    overflow-x: scroll;
+    & > img{
+        width: 150px;
+        height: 150px;
+        margin: 15px 15px 5px;
+        @include xs {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    button{
+        width: 40%;
+        background: #B42828;
+        border: 2px solid #B42828;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(#000, 0.15);
+        border-radius: 5px;
+        color: #fff;
+        font-size: 22px;
+        &:hover{
+            transform: scale(0.98);
+        }
+        &.active{
+            color: #B42828;
+            background: #fff;
+        }
+        @include xs {
+            font-size: 15px;
+        }
+    }
+    .friends-rankings{
+        display: none;
+    }
+    table{
+        width: 100%;
+        img{
+            width: 35px;
+            height: 35px;
+            @include xs {
+                width: 25px;
+                height: 25px;
+            }
+            &.pimg{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin-right: 5px;
+                box-shadow: 0 0 8px rgba(#000, 0.2);
+                border: 2px solid #ccc;
+                @include xs {
+                    display: none;
+                }
+            }
+        }
+        tr{
+            td, th{
+                padding: 10px 5px;
+                text-align: center;
+                font-size: 18px;
+                border: 0.5px solid #00000014;
+                box-shadow: 0 2px 2px rgba(#000, 0.1);
+            }
+        }
+    }
+}
+
+.modals{
+    direction: rtl;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(#000, 0.15);
+    border-radius: 5px;
+    font-size: 20px;
+    transform: translateX(110%);
+    &.show{
+        transform: translateX(0);
+    }
+    .head{
+        padding: 18px 20px;
+        height: 12.5%;
+        background: #F9FAFD;
+        border-bottom: 1px solid #ccc;
+    }
+    .body{
+        padding: 15px 20px;
+        height: 75%;
+    }
+    .footer{
+        padding: 18px 20px;
+        height: 12.5%;
+        background: #F9FAFD;
+        border-top: 1px solid #ccc;
+    }
+    .close{
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        padding-top: 4px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        box-shadow: 0 2px 7px rgba(#000, 0.1);
+        &:hover{
+            background: rgba(0, 0, 0, 0.1);
+        }
+        @include xs {
+            font-size: 15px;
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.login-modal{
+    padding: 30px 10px;
+    text-align: center;
+    .body{
+        height: 100%;
+        padding: 15px;
+        h3{
+            margin-bottom: 40px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            @include xs {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        label{
+            display: block;
+            margin-top: 30px;
+            @include xs {
+                font-size: 15px;
+            }
+        }
+        input{
+            display: block;
+            margin: 0 auto;
+            width: 75%;
+            border-radius: 5px;
+            border-right: 0;
+            border-left: 0;
+            border-top: 0;
+            &:focus{
+                border-bottom: 2px solid #28B446;
+            }
+            @include xs {
+                width: 100%;
+            }
+        }
+        button{
+            border-radius: 5px;
+            margin-top: 25px;
+            background: #28B446;
+            border: 2px solid #28B446;
+            padding: 10px 50px;
+            &:hover{
+                transform: none;
+                background: #fff;
+                color: #28B446;
+            }
+        }
+    }
+}
+
+
+.signup-modal, .edit-modal{
+    padding: 30px 10px;
+    text-align: center;
+    overflow-y: scroll;
+    .body{
+        height: 100%;
+        padding: 15px;
+        h3{
+            margin-bottom: 40px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            @include xs {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        label{
+            display: block;
+            margin-top: 30px;
+            @include xs {
+                font-size: 15px;
+            }
+        }
+        input{
+            display: block;
+            margin: 0 auto;
+            width: 75%;
+            border-radius: 5px;
+            border-right: 0;
+            border-left: 0;
+            border-top: 0;
+            &:focus{
+                border-bottom: 2px solid #28B446;
+            }
+            @include xs {
+                width: 100%;
+            }
+        }
+        button{
+            border-radius: 5px;
+            margin: 20px 0;
+            background: #28B446;
+            border: 2px solid #28B446;
+            padding: 10px 50px;
+            &:hover{
+                transform: none;
+                background: #fff;
+                color: #28B446;
+            }
+            &.last{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+.add-friend-modal{
+    padding: 30px 10px;
+    text-align: center;
+    overflow-y: scroll;
+    .body{
+        height: 100%;
+        padding: 15px;
+        h3{
+            margin-bottom: 40px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            @include xs {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .searchDiv{
+            label{
+                display: block;
+                margin-top: 30px;
+                @include xs {
+                    font-size: 15px;
+                }
+            }
+            input{
+                display: block;
+                margin: 0 auto;
+                width: 75%;
+                border-radius: 5px;
+                border-right: 0;
+                border-left: 0;
+                border-top: 0;
+                &:focus{
+                    border-bottom: 2px solid #28B446;
+                }
+                @include xs {
+                    width: 100%;
+                }
+            }
+            button{
+                border-radius: 5px;
+                margin: 20px 0;
+                background: #28B446;
+                border: 2px solid #28B446;
+                padding: 10px 50px;
+                &:hover{
+                    transform: none;
+                    background: #fff;
+                    color: #28B446;
+                }
+                &.last{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        h4{
+            display: none;
+        }
+        .results{
+            padding: 20px 0;
+            table{
+                display: none;
+                width: 100%;
+                img{
+                    &.pimg{
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                        box-shadow: 0 0 8px rgba(#000, 0.2);
+                        border: 2px solid #ccc;
+                        @include xs {
+                            display: none;
+                        }
+                    }
+                }
+                tr{
+                    td, th{
+                        padding: 10px 5px;
+                        text-align: center;
+                        font-size: 20px;
+                        border: 0.5px solid #00000014;
+                        box-shadow: 0 2px 2px rgba(#000, 0.1);
+                        i{
+                            cursor: pointer;
+                            color: #28B446;
+                            font-size: 30px;
+                            &:hover{
+                                transform: scale(0.95);
+                            }
+                        }
+                    }
+                }
+            }
+            .noResults{
+                display: none;
+                padding: 40px 0;
+                background: rgb(236, 235, 235);
+                box-shadow: 0 0 10px rgba(#000, 0.1);
+                border-radius: 10px;
+                img{
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+}
+
+
+.game-request{
+    display: none;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.5);
+    .body{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        padding: 40px 10px;
+        box-shadow: 0 0 10px rgba(#000, 0.1);
+        background: #fff;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 8px;
+        img{
+            width: 80px;
+            height: 80px;
+            padding: 3px;
+            box-shadow: 0 0 5px rgba(#000, 0.3);
+            border-radius: 50%;
+        }
+        button{
+            border-radius: 5px;
+            margin: 10px 0;
+            background: #28B446;
+            border: 2px solid #28B446;
+            padding: 10px 50px;
+            &:hover{
+                transform: none;
+                background: #fff;
+                color: #28B446;
+            }
+            &.cancel{
+                background: #B42828;
+                border: 2px solid #B42828;
+                &:hover{
+                    background: #fff;
+                    color: #B42828;
+                }
+            }
+        }
+    }
+}
+
+.loading{
+    display: none;
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    div{
+        margin: 185px auto;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 5px solid #000;
+        border-right-color: #dedede;
+        border-bottom-color: #dedede;
+        animation: loading 0.5s linear infinite;
+        box-shadow: 0 0 10px rgba(#000, 0.1);
+    }
+}
+@include keyframes (loading){
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.swal2-container{
+    z-index: 9999999999999999999!important;
+}
+.swal2-popup .swal2-title{
+    font-size: 21px!important;
+}
+
+.preloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 99999999999999999999999999999999999999;
+    text-align: center;
+    img{
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 220px auto 0;
+    }
+}
+
+.preloader .loader {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .preloader .loader div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #000;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .preloader .loader div:nth-child(1) {
+    left: 6px;
+    animation: loader1 0.6s infinite;
+  }
+  .preloader .loader div:nth-child(2) {
+    left: 6px;
+    animation: loader2 0.6s infinite;
+  }
+  .preloader .loader div:nth-child(3) {
+    left: 26px;
+    animation: loader2 0.6s infinite;
+  }
+  .preloader .loader div:nth-child(4) {
+    left: 45px;
+    animation: loader3 0.6s infinite;
+  }
+  @keyframes loader1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes loader3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes loader2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }

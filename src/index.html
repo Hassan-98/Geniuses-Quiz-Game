@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Encoding -->
+        <meta charset="utf-8">
+        <!-- Internet Explorer Compatiblity -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Viewport Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Description Meta -->
+        <meta name="description" content="لعبة تحدي العباقرة , تحدي أصدقائك فالاسئلة العامة">
+        <!-- Keywords Meta -->
+        <meta name="keywords" content="العباقرة, تحدي, تحدي العباقرة">
+        <!-- Author Meta -->
+        <meta name="author" content="Hassan Ali">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <!-- Page Custom Styles -->
+        <link rel="stylesheet" href="css/home.css">
+        <!-- Page Icon -->
+        <link rel="shortcut icon" href="images/logo.png">
+        <!-- Page Title -->
+        <title>تحدي العباقرة</title>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> Header Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <header>
+            <img src="images/logo.svg">
+            <h2>تحدي العباقرة</h2>
+        </header>
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> Navigation Bar <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <nav class="main-nav">
+            <ul>
+                <li class="home active"><img src="images/home.svg"></li><li class="rankings"><img src="images/ranking.svg"></li><li class="settings"><img src="images/settings.svg"></li>
+            </ul>
+        </nav>
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> AUTH Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <section class="auth">
+            <img src="images/logo.svg">
+            <h4>أنضم الان إلى مجتمع العباقرة!</h4>
+            <div class="loginDiv">
+                <img src="images/login.svg">
+                <h4>تسجيل الدخول</h4>
+            </div>
+            <div class="signupDiv">
+                <img src="images/signup.svg">
+                <h4>تسجيل عضوية جديدة</h4>
+            </div>
+            <div class="loginGoogle">
+                <img src="images/google.svg">
+                <h4>أنضم بواسطة جوجل</h4>
+            </div>
+        </section>
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> Main Face Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <section class="main-face">
+            <img src="images/logo.svg" class="reAuthPic">
+            <h4>مرحباً بك <span class="authName"></span> في مجتمع العباقرة!</h4>
+            <p>ابدأ التحدي الان و أرتقي إلى قمة الترتيب, كن سيد العباقرة!</p>
+            
+            <div class="challengeDiv">
+                <img src="images/challenge.svg">
+                <h4>أبدأ تحدي جديد</h4>
+            </div>
+            <div class="challengeFriendDiv">
+                <img src="images/challengeFriend.svg">
+                <h4>تحدي صديق</h4>
+            </div>
+            <div class="friendListDiv">
+                <img src="images/friendsList.svg">
+                <h4>قائمة الاصدقاء</h4>
+            </div>
+            <div class="match">
+                <h2>جاري البحث عن منافس ...</h2>
+            </div>
+            <div class="game-face">
+                <div class="playerTwo">
+                    <img src="" class="p2img">
+                    <h4 class="p2name"></h4>
+                </div>
+                <div class="vs">
+                    <img src="images/vs.svg">
+                </div>
+                <div class="playerOne">
+                    <img src="" class="p1img">
+                    <h4 class="p1name"></h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="player-one-score"><span class="score"></span></div>
+                <div class="player-two-score"><span class="score"></span></div>
+                <div class="timer">0:10 <i class="far fa-clock"></i></div>
+                <div class="questionNumber">1<i class="fas fa-hashtag fa-sm"></i></div>
+                <div class="question">
+                    ماهو أكبر كواكب المجموعة الشمسية؟
+                </div>
+                <div class="options">
+                    <span class="optOne">الارض</span><span class="optTwo">المشترى</span><span class="optThree">زحل</span><span class="optFour">المريخ</span>
+                </div>
+            </div>
+            <div class="game-end">
+                <div class="winner">
+                    <div class="p1result">
+                        <img src="">
+                        <h3>50 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <div class="img">
+                        <img src="images/winner.svg">
+                    </div>
+                    <div class="p2result">
+                        <img src="">
+                        <h3>40 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <h3>مبروك لقد سحقت أعدائك! أنت الفائز بالمعركة</h3>
+                </div>
+                <div class="winner-ultimate">
+                    <div class="p1result">
+                        <img src="">
+                        <h3>50 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <div class="img">
+                        <img src="images/ultimate.svg">
+                    </div>
+                    <div class="p2result">
+                        <img src="">
+                        <h3>40 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <h3>نــصــر ســاحــق! لقد فزت بالعلامة الكاملة!</h3>
+                </div>
+                <div class="equal">
+                    <div class="p1result">
+                        <img src="">
+                        <h3>50 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <div class="img">
+                        <img src="images/equal.svg">
+                    </div>
+                    <div class="p2result">
+                        <img src="">
+                        <h3>40 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <h3>تحدي صعب! لقد أنتهت الجولة بالتعادل!</h3>
+                </div>
+                <div class="loser">
+                    <div class="p1result">
+                        <img src="">
+                        <h3>50 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <div class="img">
+                        <img src="images/loser.svg">
+                    </div>
+                    <div class="p2result">
+                        <img src="">
+                        <h3>40 Points</h3>
+                        <i class="fas fa-user-plus addThisFriend" title="Add Friend"></i>
+                        <i class="fas fa-user meUser" title="That's just you :)"></i>
+                    </div>
+                    <h3>إنة لامر مؤسف حقاً, لقد سحقك عدوك! تدرب جيداً و أعد المحاولة</h3>
+                </div>
+                <button class="new-game">أرجع للقائمة الرئيسية</button>
+            </div>
+        </section>
+        
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> Friend List Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <section class="friend-list">
+            <img src="images/friendsList.svg">
+            <h2>قائمة الاصدقاء</h2>
+            <br>
+            <button class="addNewFriend">أضف صديق جديد</button>
+            <button class="backToHome">رجوع</button>
+            <hr>
+            <div class="noFriends">
+                <img src="images/no-friends.svg">
+                <h1>لا يوجد أصدقاء حتى الان</h1>
+            </div>
+            <div class="friends">
+                <table class="friends-table">
+                    <tr>
+                        <th>اللاعب</th>
+                        <th>الخبرة</th>
+                        <th>تحدي</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> Rankings Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <section class="rankings-section">
+            <img src="images/rankings.svg">
+            <h2>الترتيبات</h2>
+            <br>
+            <button class="general-rankings-btn active">الترتيبات العامة</button>
+            <button class="friends-rankings-btn">ترتيب الاصدقاء</button>
+            <hr>
+            <div class="general-rankings">
+                <table class="general">
+                    <tr>
+                        <th>#</th>
+                        <th>اللاعب</th>
+                        <th>ف</th>
+                        <th>ت</th>
+                        <th>خ</th>
+                        <th>الخبرة</th>
+                    </tr>
+                </table>
+                <hr>
+                <table class="me-general">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="friends-rankings">
+                <table class="friends-ranking-table">
+                    <tr>
+                        <th>#</th>
+                        <th>اللاعب</th>
+                        <th>ف</th>
+                        <th>ت</th>
+                        <th>خ</th>
+                        <th>الخبرة</th>
+                    </tr>
+                </table>
+                <hr>
+                <table class="me-friend">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> Settings Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+        <section class="settings-section">
+            <img src="images/settings.svg">
+            <h2>الاعدادات</h2>
+            <br>
+            <hr>
+            <div class="game-version">
+                <h4>أصدار اللعبة : 1.0.0.11</h4>
+            </div>
+            <div class="change-data">
+                <i class="fas fa-edit"></i> تغيير إعدادات الحساب 
+            </div>
+            <div class="logout">
+                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+            </div>
+            <div class="footer">
+                <h4>
+                    تواصل معنا عبر : <a href="https://www.facebook.com/hassan2231998" target="_blank">فيسبوك</a>
+                </h4>
+                <h4>
+                    تصميم و برمجة فريق : &copy;BroCoders
+                </h4>
+            </div>
+        </section>
+        
+
+        <!--*--*--*--*--*--*--*--*--*--*--*--*--*--|> MODALS Section <|--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+
+        <!--*--*--*--*--|> Login Modal <|--*--*--*--*-->
+        <div class="login-modal modals">
+            <i class="fas fa-times close" title="Close"></i>
+            <div class="body">
+                <img src="images/login.svg">
+                <h3>تسجيل الدخول</h3>
+                <label for="email-login">البريد الالكتروني</label>
+                <input type="email" id="email-login" placeholder="البريد الالكتروني" required>
+                <label for="pass-login">كلمة المرور</label>
+                <input type="password" id="pass-login" placeholder="كلمة المرور" required>
+                <button class="login">تسجيل الدخول</button>
+            </div>
+        </div>
+        
+
+        <!--*--*--*--*--|> Signup Modal <|--*--*--*--*-->
+        <div class="signup-modal modals">
+            <i class="fas fa-times close" title="Close"></i>
+            <div class="body">
+                <img src="images/signup.svg">
+                <h4>تسجيل عضوية جديدة</h4>
+                <label for="username-signup">اسم اللاعب</label>
+                <input type="text" id="username-signup" placeholder="اسم اللاعب" maxlength="20" required>
+                <label for="email-signup">البريد الالكتروني</label>
+                <input type="email" id="email-signup" placeholder="البريد الالكتروني" required>
+                <label for="pass-signup">كلمة المرور</label>
+                <input type="password" id="pass-signup" placeholder="كلمة المرور" required>
+                <label for="pic-signup">صورة اللاعب</label>
+                <input type="file" id="pic-signup" placeholder="صورة اللاعب" required>
+                <button class="signup last">التسجيل</button>
+            </div>
+        </div>
+
+
+        <!--*--*--*--*--|> Login Modal <|--*--*--*--*-->
+        <div class="edit-modal modals">
+            <i class="fas fa-times close" title="Close"></i>
+            <div class="body">
+                <img src="images/edit.svg">
+                <h3>تعديل البيانات الشخصية</h3>
+                <label for="name-edit">تعديل الاسم</label>
+                <input type="text" id="name-edit" placeholder="تعديل الاسم" required>
+                <button class="name-edit-btn">تعديل</button>
+                <label for="pass-edit">تعديل كلمة المرور</label>
+                <input type="password" id="pass-edit" placeholder="تعديل كلمة المرور" required>
+                <button class="pass-edit-btn">تعديل</button>
+                <label for="pic-edit">تعديل الصورة الشخصية</label>
+                <input type="file" id="pic-edit" required>
+                <button class="pic-edit-btn last">تعديل</button>
+            </div>
+        </div>
+
+
+        <!--*--*--*--*--|> Add Friend Modal <|--*--*--*--*-->
+        <div class="add-friend-modal modals">
+            <i class="fas fa-times close" title="Close"></i>
+            <div class="body">
+                <img src="images/addFriend.svg">
+                <h3>إضافة صديق جديد</h3>
+                <hr>
+                <div class="searchDiv">
+                    <label for="search-input">البحث بالبريد الالكتروني</label>
+                    <input type="email" id="search-input" placeholder="البحث بالبريد الالكتروني">
+                    <button class="search-btn">أبحث</button>
+                </div>
+                <hr>
+                <h4>نتائج البحث</h4>
+                <div class="results">
+                    <table class="result-table">
+                        <tr>
+                            <th>اللاعب</th>
+                            <th>الخبرة</th>
+                            <th>إضافة</th>
+                        </tr>
+                    </table>
+                    <div class="noResults">
+                        <img src="images/no-friends.svg">
+                        <h1>تعذر الحصول على نتائج</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!--*--*--*--*--|> Game Request Modal <|--*--*--*--*-->
+        <div class="game-request">
+            <div class="body">
+                <img src="https://lh4.googleusercontent.com/-CaruBYNTtz4/AAAAAAAAAAI/AAAAAAAAK4U/krV5C0as7NY/photo.jpg">
+                <h4>Hassan Ali</h4>
+                <p>يريد <span>Hassan Ali</span> مواجهتك في تحدي العباقرة</p>
+                <button class="accept">قبول التحدي</button>
+                <button class="cancel">رفض التحدي</button>
+            </div>
+        </div>
+        
+
+        <!--*--*--*--*--|> Loading Modal <|--*--*--*--*-->
+        <div class="loading">
+            <div></div>
+        </div>
+
+        <div class="preloader">
+            <img src="images/logo.svg">
+            <div class="loader"><div></div><div></div><div></div><div></div></div>
+        </div>
+            
+
+        <!-- JQuery Library v(3.3.1) -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- Sweet Alert JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <!-- Firebase Library v(5.9.2) -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <!-- Firework Library v(1.0.5) -->
+        <script src="https://cdn.jsdelivr.net/npm/firework.js@1.0.5/firework-production.min.js"></script>
+        <!-- Page Custom Scripts -->
+        <script src="js/custom.js"></script>
+        <!-- Back-End Scripts -->
+        <script src="js/back-end.js"></script>
+        <!-- LIVE RELOAD -->
+        <script src="http://localhost:35729/livereload.js"></script>
+    </body>
+</html>

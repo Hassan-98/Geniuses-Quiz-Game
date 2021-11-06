@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "staging": "smart-challange",
+    "default": "smart-challange",
+    "s": "smart-challange"
+  }
+}

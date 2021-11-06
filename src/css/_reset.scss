@@ -1,0 +1,330 @@
+/*  { General Rules & Styles For Elements }   */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+p {
+    color: #676767;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+span {
+    display: inline-block;
+}
+
+hr{
+    margin: 25px 0;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #002147;
+    padding: 10px 30px;
+    color: #fff;
+    border: 1px solid #999;
+    outline: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+}
+
+input, textarea {
+    background: #F8F8F8;
+    border-radius: 15px;
+    border: 2px solid #F2F2F2;
+    padding: 12px 20px;
+    outline: none;
+    font-size: 15px;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #002147;
+}
+
+table {
+    max-width: 100%;
+}
+
+table tr th, table tr td {
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 7px 25px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.thumb-sm {
+    width: 50px;
+    height: 50px;
+}
+
+.thumb-md {
+    width: 90px;
+    height: 90px;
+}
+
+.thumb-lg {
+    width: 140px;
+    height: 140px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.social-icons i {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    background: #002147;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+}
+
+.social-icons i:first-child {
+    background: #2AA3F0;
+    /* Twitter */
+}
+
+.social-icons i:nth-child(2) {
+    background: #3B5998;
+    /* Facebook */
+}
+
+.social-icons i:nth-child(3) {
+    background: #FC0D1C;
+    /* YouTube */
+}
+
+.social-icons i:nth-child(4) {
+    background: #FB416B;
+    /* Instagram */
+}
+
+.social-icons i:nth-child(5) {
+    background: #BD081C;
+    /* Pinterest */
+}
+
+/***** Adjusting Font Sizes For All Screens *****/
+@media (max-width: 992px) {
+    h1 {
+        font-size: 40.8px;
+    }
+    h2 {
+        font-size: 32.3px;
+    }
+    h3 {
+        font-size: 25.5px;
+    }
+    h4 {
+        font-size: 20.4px;
+    }
+    h5 {
+        font-size: 15.3px;
+    }
+    h6 {
+        font-size: 12.75px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 28.5px;
+    }
+    h3 {
+        font-size: 22.5px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 13.5px;
+    }
+    h6 {
+        font-size: 11.25px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    button {
+        padding: 8px 20px;
+    }
+    input, textarea {
+        padding: 10px 16px;
+        width: 100%;
+    }
+    button, input, textarea {
+        font-size: 13px;
+    }
+}
+
+@mixin lg {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin em {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin center {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+    text-align: center;
+}
+
+@mixin addFont ($name, $path){
+    @font-face {
+        font-family: $name;
+        src: url(../fonts/#{$path});
+    }
+}
+
+@mixin fixedBack ($path){
+    background: url(../images/#{$path}) fixed no-repeat;
+    background-size: cover;
+}
+
+@mixin overlay ($color, $opacity) {
+    width: 100%;
+    height: 100%;
+    background: rgba($color, $opacity);
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin prefixer($property, $value, $vendors: webkit moz ms o, $default: true) {
+    @if $default {
+        #{$property}: #{$value};
+    }
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
